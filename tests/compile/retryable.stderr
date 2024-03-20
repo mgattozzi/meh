@@ -1,0 +1,7 @@
+error[E0277]: the `?` operator can only be applied to values that implement `Try`
+  --> tests/compile/retryable.rs:17:16
+   |
+17 |     let unit = whee?;
+   |                ^^^^^ the `?` operator cannot be applied to type `meh::Retry<(), String>`
+   |
+   = help: the trait `Try` is not implemented for `meh::Retry<(), String>`
